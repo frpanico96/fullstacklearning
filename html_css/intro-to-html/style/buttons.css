@@ -1,0 +1,254 @@
+/* Style that applies to every button */
+button
+{
+  cursor: pointer;
+  margin-right: 8px;
+  transition: opacity .15s, box-shadow .15s, background-color .15s, color .15s, padding 0.15s;
+}
+/* Subscribe button only */
+.subscribe-button
+{
+  background-color: rgb(200, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+/* Subscribe button - hover effect*/
+.subscribe-button:hover
+{
+  opacity: .8;
+}
+/* Subscribe button - active effect*/
+.subscribe-button:active
+{
+  opacity: .5;
+}
+/* Join button only */
+.join-button
+{
+  background-color: white;
+  border-color: rgb(6, 95, 212);
+  border-style: solid;
+  border-width: 1px;
+  color: rgb(6, 95, 212);
+  border-radius: 2px;
+  padding: 9px 16px;
+}
+/* Join button - hover effect*/
+.join-button:hover
+{
+  background-color: rgb(6, 95, 212);
+  color: white
+}
+/* Join button - active effect*/
+.join-button:active
+{
+  opacity: .7;
+}
+/* Tweet button only */
+.tweet-button
+{
+  background-color: rgb(29, 155, 240);
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 16px;
+}
+/* Tweet button - hover effect*/
+.tweet-button:hover
+{
+  box-shadow: -3px 3px 10px rgb(0, 0, 0, .2);
+}
+.uber-button
+{
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px 16px;
+}
+.uber-button:hover
+{
+  opacity: .7;
+}
+.amazon-button
+{
+  background-color: rgb(255, 216, 20);
+  color: black;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 16px;
+}
+.amazon-button:hover
+{
+  background-color: rgb(234, 194, 18);
+}
+.github-button
+{
+  background-color: rgb(46, 164, 79);
+  color: white;
+  border-radius: 3px;
+  font-weight: bold;
+  border: none;
+  padding: 10px 16px;
+}
+.github-button:hover
+{
+  box-shadow: -3px 3px 10px rgb(0, 0, 0, .3);
+}
+.bootstrap-getstarted-button
+{
+  background-color: rgb(121, 82, 179);
+  color: white;
+  border-radius: 3px;
+  border: none;
+  font-weight: bold;
+  padding: 10px 16px;
+}
+.bootstrap-getstarted-button:hover
+{
+  background-color: rgb(102, 50, 180);
+}
+.bootstrap-download-button
+{
+  background-color: white;
+  color: rgb(108, 117, 125);
+  border-color: rgb(108, 117, 125);
+  border-style: solid;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 9px 16px;
+}
+.bootstrap-download-button:hover
+{
+  background-color: rgb(108, 117, 125);
+  color: white;
+}
+.linkedin-apply-button
+{
+  background-color: rgb(10, 102, 194);
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-weight: bold;
+  padding: 10px 16px;
+}
+.linkedin-apply-button:hover
+{
+  background-color: rgb(6, 73, 140);
+}
+.linkedin-save-button
+{
+  background-color: white;
+  color: rgb(10, 102, 194);
+  border-color: rgb(10, 102, 194);
+  border-style: solid;
+  border-radius: 18px;
+  font-weight: bold;
+  padding: 9px 16px;
+}
+.linkedin-save-button:hover
+{
+  background-color: rgba(205, 227, 252, .3);
+  border-width: 3px;
+  padding: 7px 16px
+}
+.amazon-link
+{
+  color: rgb(0, 113, 133);
+  transition: color .15s;
+}
+.amazon-link:hover
+{
+  color: rgb(255, 164, 28);
+}
+.amazon-p-text
+{
+  font-size: 24px;
+  font-weight: bold;
+}
+.amazon-p-price
+{
+  font-weight: bold;
+  color: rgb(0, 118, 0);
+}
+.amazon-btn
+{
+  border: none;
+  color: black;
+  padding: 10px 16px;
+  border-radius: 18px;
+}
+.add-to-cart
+{
+  background-color: rgb(255, 216, 20);
+}
+.add-to-cart:hover
+{
+  background-color: rgb(215, 180, 6);
+}
+.add-to-cart:active
+{
+  opacity: .4;
+}
+.buy-now
+{
+  background-color: rgb(255, 164, 28);
+}
+.buy-now:hover
+{
+  background-color: rgb(202, 123, 3);
+}
+.buy-now:active
+{
+  opacity: .4;
+}
+.fourh-button
+{
+  padding: 8px 4px;
+  margin-left: 6px;
+}
+.fourh-a
+{
+  padding: 8px 4px;
+  margin-right: 2px;
+}
+.stretch-btn
+{
+  background-color: green;
+  border: none;
+  padding: 3px 8px;
+  transition: padding 0.4s;
+}
+.stretch-btn:hover
+{
+  padding: 15px 20px;
+}
+.shadow-btn
+{
+  background-color: green;
+  border: none;
+  padding: 4px 8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.15s;
+}
+.shadow-btn:active
+{
+  box-shadow: none;
+}
+.onetwothree-btn
+{
+  background-color: green;
+  border: none;
+  padding: 4px 8px;
+  transition: padding .4s;
+}
+.onetwothree-btn:hover
+{
+  padding: 4px 12px;
+}

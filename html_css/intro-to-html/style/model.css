@@ -1,0 +1,21 @@
+.model-base
+{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.model-header
+{
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.model-span-descr
+{
+  text-decoration: underline;
+}
+.model-span-descr:hover
+{
+  cursor: pointer;
+}

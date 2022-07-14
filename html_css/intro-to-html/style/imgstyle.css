@@ -1,0 +1,377 @@
+.img-one
+{
+  width: 200px;
+  border-radius: 10px;
+}
+.img-two
+{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.img-three
+{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+.seven-d
+{
+  padding: 10px 8px;
+  border-radius: 5px;
+  border-color: rgb(186, 186, 186);
+  border-style: solid;
+}
+.seven-e
+{
+  padding: 8px 10px;
+  width: 300px;
+  border-radius: 150px;
+  border-style: solid;
+  border-color: rgb(186, 186, 186);
+  border: none;
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, .3);
+}
+.seven-p-f
+{
+  margin-top: 0px;
+  margin-bottom: 2px;
+  color: rgb(89, 89, 89);
+}
+.seven-f
+{
+  border-style: solid;
+  width: 370px;
+  height: 25px;
+  border-radius: 3px;
+}
+.seven-descr-f
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.seven-btn-f
+{
+  width: 370px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 185px;
+  border: none;
+  background-color: rgb(10, 102, 194);
+  color: white;
+}
+.seven-g
+{
+  vertical-align: middle;
+}
+.seven-img-g
+{
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+.seven-input-g
+{
+  border: none;
+  margin-left: 10px;
+  font-size: 20px;
+}
+.seven-btn-g
+{
+  background-color: rgb(29, 155, 240);
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 16px;
+  margin-left: 70px;
+}
+.eight-a
+{
+  display: block;
+  border-style: solid;
+  border-radius: 3px;
+  margin-bottom: 3px;
+}
+.eight-b
+{
+  vertical-align: middle;
+  display: inline-block;
+}
+.eight-b-p
+{
+  width: 200px;
+}
+.eight-b-btn
+{
+  margin-left: 3px;
+}
+.eight-c
+{
+  display: block;
+}
+.eight-c-img
+{
+  width: 100px;
+  height: 50px;
+  margin-left: 105px;
+}
+.eight-c-input
+{
+  padding: 8px 10px;
+  width: 300px;
+  border-radius: 150px;
+  border-style: solid;
+  border-color: rgb(186, 186, 186);
+  border: none;
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, .3);
+}
+.eight-d
+{
+  border-color: rgb(130, 130, 130);
+  margin-bottom: 10px;
+}
+.eight-d-input
+{
+  width: 100px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+}
+.eight-d-input-b
+{
+  display: block;
+  width: 225px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+}
+.eight-d-btn
+{
+  color: white;
+  border: none;
+  background-color:rgb(48, 111, 228);
+  width: 248px;
+  border-radius: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.eight-e-p
+{
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.eight-e-input
+{
+  display: block;
+  border: none;
+  background-color: rgba(185, 185, 185, 0.3);
+  width: 300px;
+  margin-bottom: 3px;
+  padding: 10px 8px;
+}
+.eight-e-btn
+{
+  margin-top: 10px;
+  padding: 10px 10px;
+  border: none;
+}
+.eight-e-btn-dark
+{
+  background-color: black;
+  color: white;
+}
+.eight-e-btn-light
+{
+  background-color: rgba(185, 185, 185, 0.3);
+  margin-left: 10px;
+}
+.nine-a
+{
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+.nine-b
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: green;
+}
+.nine-c
+{
+  width:300px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  padding: 8px 8px;
+}
+.nine-d
+{
+  width: 320px;
+  background-color: black;
+  padding: 5px 10px;
+}
+.nine-d-header
+{
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+.nine-d-descr
+{
+  color: rgb(175, 175, 175);
+}
+.nine-e
+{
+  box-shadow: 0px 0px 10px rgba(0, 0 , 0, .3);
+  border-radius: 10px;
+  padding: 10px 10px;
+  width: 450px;
+}
+.nine-f
+{
+  display: inline-block;
+  width: 200px;
+  box-shadow: 0px 0px 10px rgba(0, 0 , 0, .3);
+}
+.nine-f-img
+{
+  width:100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.nine-f-p-name
+{
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.nine-f-p-stats
+{
+  margin-top:0px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  color: rgb(130, 130, 130);
+}
+.nine-f-btn
+{
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: rgb(15, 113, 211);
+  color: white;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.nine-h
+{
+  text-align: center;
+  width:600px;
+  margin: auto;
+}
+.nine-h-wrp-img
+{
+  display: inline-block;
+  margin-bottom: 10px
+}
+.nine-h-img
+{
+  width: 200px;
+}
+.nine-h-wrp-input
+{
+  margin: auto;
+  margin-bottom: 20px;
+}
+.nine-h-input
+{
+  width: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0 , 0, .4);
+  border: none;
+  border-radius: 200px;
+  padding: 10px 10px;
+}
+.nine-h-btn
+{
+  border: none;
+  background-color: rgba(130, 130, 130, .2);
+  padding: 10px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.ten-d-col
+{
+  display: inline-block;
+  width: 200px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+  margin-left: 5px;
+  margin-top: 5px;
+  vertical-align: top;
+}
+.ten-d-row
+{
+  padding: 0px 5px;
+}
+.ten-d-big-img
+{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+.ten-d-p
+{
+  margin-bottom: 0px;
+  margin-top: 0px;
+  vertical-align: top;
+}
+.ten-d-p-username
+{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.ten-d-inner-col
+{
+  display: inline-block;
+  vertical-align: top;
+}
+.ten-d-small-img
+{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.ten-d-p-stats
+{
+  margin-top: 5px;
+  margin-left: 3px;
+  color: rgb(149, 149, 149);
+}
+.ten-d-btn
+{
+  color: white;
+  background-color: rgb(15, 113, 211);
+  border-radius: 3px;
+  border: none;
+  padding: 8px 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+

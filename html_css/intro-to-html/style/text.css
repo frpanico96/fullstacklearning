@@ -1,0 +1,189 @@
+p
+{
+  font-family: Roboto;
+  font-size: 14px;
+  color: rgb(96, 96, 96);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.video-title
+{
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  width: 280px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+.video-stats
+{
+  margin-bottom: 20px;
+}
+.video-author
+{
+  margin-bottom: 20px;
+}
+.video-description
+{
+  width: 280px;
+  line-height: 22px;
+  margin-bottom: 100px;
+}
+.apple-text
+{
+  margin-bottom: 50px;
+  background-color: rgb(227, 65, 64);
+  color: white;
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.apple-span-text:hover
+{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.tahoma-text
+{
+  font-family: Tahoma;
+  font-weight: bold;
+}
+.arial-bold-text
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.arial-red-text
+{
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  font-style: italic;
+}
+.verdana-block
+{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.verdana-header
+{
+  color: black;
+  font-weight: bold;
+}
+.verdana-description
+{
+  color: black;
+  width: 250px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+.verdana-btn
+{
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.arial-block
+{
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  text-align: center;
+}
+.arial-header
+{
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.arial-bottom
+{
+  color: skyblue;
+  margin-top: 10px;
+}
+.macbook-base
+{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: black;
+  margin-bottom: 5px;
+}
+.macbook-new
+{
+  color: orange;
+}
+.macbook-name
+{
+  font-weight: bold;
+  font-size: 18px;
+}
+.macbook-descr
+{
+  font-weight: bold;
+  font-size: 24px;
+}
+.macbook-btn
+{
+  margin: 0px 48.2%;
+  background-color: rgb(38, 109, 170);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.report-base
+{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 8px;
+}
+.report-header
+{
+  color: black;
+  font-size: 24px;
+}
+.header-span
+{
+  font-size: 16px;
+  color: rgb(96, 96, 96);
+}
+.report-middle
+{
+  color: green;
+}
+.middle-span
+{
+  margin-left: 3px
+}
+.bottom-span
+{
+  margin-left: 3px;
+  color: red;
+}
+.code-camp-base
+{
+  font-family: Arial, Helvetica, sans-serif;
+  width: 450px;
+}
+.code-camp-header
+{
+  margin-bottom: 7px;
+}
+.code-campe-site
+{
+  color: black;
+  font-weight: bold;
+}
+.code-camp-twitter
+{
+  margin-left: 4px;
+}
+.code-camp-tag
+{
+  color: skyblue;
+}
+.code-camp-descr
+{
+  margin-bottom: 10px;
+}

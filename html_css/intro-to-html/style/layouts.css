@@ -1,0 +1,409 @@
+body
+{
+  padding-bottom: 1000px;
+}
+.twelve
+{
+  display: flex;
+  flex-direction: row;
+}
+.twelve-a-one
+{
+  width: 200px;
+  background-color: lightblue;
+}
+.twelve-a-two
+{
+  width: 75px;
+  background-color: lightpink;
+}
+.twelve-b-one
+{
+  width: 50px;
+  background-color: lightblue;
+}
+.twelve-b-two
+{
+  flex: 1;
+  background-color: lightpink;
+}
+.twelve-b-three
+{
+  width: 75px;
+  background-color: lightblue;
+}
+.twelve-c-container
+{
+  justify-content: space-between;
+}
+.twelve-c
+{
+  width: 50px;
+  background-color: lightpink;
+}
+.twelve-d-container
+{
+  border-style: solid;
+  border-color: grey;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+.twelve-e-container
+{
+  border-style: solid;
+  border-color: rgba(156, 156, 156, .7);
+  margin-top: 100px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 300px;
+}
+.twelve-e-row
+{
+  flex: 1;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+}
+.twelve-e-p
+{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.twelve-e-btn
+{
+  color: white;
+  font-weight: bold;
+  background-color: rgb(44, 107, 253);
+  border-radius: 10px;
+  border: none;
+  padding: 3px 10px;
+}
+.twelve-g-container
+{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+  margin-top: 100px;
+  width: 500px;
+}
+.twelve-g
+{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+.twelve-g-img-container
+{
+  width: 50px;
+  margin-right: 10px;
+}
+.twelve-g-img
+{
+  width: 100%;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.twelve-g-p-container
+{
+  flex: 1;
+}
+.twelve-g-p
+{
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+.twelve-name
+{
+  font-weight: bold;
+}
+.twvelve-descr
+{
+  font-weight: 500;
+  color: rgba(156, 156, 156, .9);
+}
+.twelve-attr
+{
+  color: rgba(156, 156, 156, .9);
+}
+.twelve-g-btn-container
+{
+  width: 100px;
+}
+.twelve-g-btn
+{
+  color: white;
+  font-weight: bold;
+  background-color: rgb(27, 133, 233);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.twelve-f-container
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(66, 3, 124, .6);
+  padding: 10px 10px;
+  margin-top: 100px;
+}
+.twelve-f-home
+{
+  width: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+}
+.twelve-f-textbox-container
+{
+  flex: 1;
+  text-align: center;
+}
+.twelve-f-textbox
+{
+  width: 500px;
+  border-radius: 250px;
+  border: none;
+  padding: 5px 20px;
+}
+.twelve-f-btn-container
+{
+  width: 100px;
+}
+.twelve-f-btn
+{
+  background: none;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 10px 15px;
+  color: white;
+}
+.spacing
+{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.thirteen-a
+{
+  display: flex;
+}
+.thirteen-a-nested
+{
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  background-color: lightpink;
+}
+.thirteen-a-p
+{
+  color: white;
+  background-color: black;
+}
+.thirteen-a-sample
+{
+  width: 200px;
+  background-color: lightblue;
+}
+.thirteen-b
+{
+  display: flex;
+  margin-top: 10px;
+}
+.thirteen-b-sample
+{
+  width: 100px;
+  background-color: lightpink;
+}
+.thirteen-b-nested
+{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+}
+.thirhteen-b-inner-two
+{
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.thirteen-b-p-one
+{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.thirteen-b-p-two
+{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+  background-color: black;
+}
+.thirteen-e
+{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+  max-width: 400px;
+  padding: 5px 15px 20px 15px;
+  border-radius: 5px;
+}
+.thirteen-d
+{
+  cursor: pointer;
+}
+.thirteen-d-p
+{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.thirteen-d-header-p
+{
+  color: rgb(102, 101, 101);
+  font-size: 13px;
+}
+.thirteen-d-flex
+{
+  display: flex;
+  margin-top: 10px;
+}
+.thirteen-d-img-container
+{
+  width: 50px;
+}
+.thirteen-d-img
+{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 10px
+}
+.thirteen-d-description
+{
+  flex: 1;
+}
+.thirteen-d-title-hour
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.thirteen-d-title-p
+{
+  font-size: 18px;
+  font-weight: bold;
+}
+.thirteen-d-hour-p
+{
+  color: rgb(102, 101, 101);
+}
+.thirteen-d-object
+{
+  margin-top: 2px;
+}
+.thirteen-d-p-object
+{
+  font-size: 16px;
+  font-weight: bold;
+}
+.thirteen-d-preview
+{
+  margin-top: 2px;
+}
+.thirteen-d-p-preview
+{
+  color: rgb(102, 101, 101);
+}
+.thirteen-f
+{
+  display: flex;
+  justify-content: start;
+  max-width: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 109, 198, 0.3);
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+.thirteen-f-p
+{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.thirteen-f-img-container
+{
+  width: 50px;
+}
+.thirteen-f-img
+{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.thirteen-f-nested
+{
+  flex: 1;
+  padding: 0px 10px;
+}
+.thirteen-f-p-twitter-name
+{
+  vertical-align: top;
+}
+.thirteen-f-twitter-nickname
+{
+  font-weight: bold;
+}
+.thirteen-f-twitter-username
+{
+  color: rgb(102, 102, 102);
+  margin-left: 3px;
+}
+.thirteen-f-twitter-descr
+{
+  width:400px;
+  margin-top: 2px;
+}
+.thirteen-f-video
+{
+  display: flex;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(156, 156, 156, .5);
+  border-radius: 15px;
+  margin-top: 10px;
+  width: 350px;
+  cursor: pointer;
+}
+.thirteen-f-space
+{
+  width: 100px;
+  background-color: rgba(156, 156, 156, .5);
+}
+.thirteen-f-video-description
+{
+  flex: 1;
+  padding: 10px 10px;
+}
+.thirteen-f-p-youtube
+{
+  color: rgb(102, 102, 102);
+}
+.thirteen-f-p-youtube-description
+{
+  margin-top: 5px;
+}
+
+

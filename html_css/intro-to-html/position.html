@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Position</title>
+  </head>
+  <body style="padding-bottom: 1000px; padding-top: 60px; padding-left: 100px;">
+    <div style=
+    "
+      color: white;
+      background-color: black;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      height: 50px;
+      z-index: 100;
+    "
+    >header</div>
+    <div style=
+    "
+      background-color: green;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      top: 50px;
+      width: 100px; 
+    "
+    >sidebar
+      <div style=
+      "
+        position: absolute;
+        background-color: red;
+        color: white;
+        right: 0;
+        top: 0;
+      ">
+      X
+      </div>
+    </div>
+    <div style=
+    "
+      position: absolute;
+      background-color: red;
+      color: white;
+      right: 10px;
+      top: 60px;
+    ">
+    absolute
+    </div>
+    <div style=
+    "
+      background-color: lightblue;
+      height: 200px;
+      width: 200px;
+      position: static;
+    "
+    >div 1</div>
+    <div style=
+    "
+      background-color: lightpink;
+      height: 200px;
+      width: 200px;
+      position: relative;
+    ">div 2
+      <div style=
+      "
+        position: absolute;
+        background-color: black;
+        color: white;
+        right: 10px;
+        bottom: 10px;
+      ">
+      5:00
+      </div>
+    </div>
+  </body>
+</html>

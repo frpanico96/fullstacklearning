@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Position Excercise</title>
+    <style>
+      body
+      {
+        height: 3000px;
+      }
+      p
+      {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .fourteen
+      {
+        position: fixed;
+      }
+      .fourteen-a
+      {
+        bottom: 20px;
+        right: 20px;
+        background-color: black;
+        color: white;
+      }
+      .fourteen-b
+      {
+        right: 0;
+        top: 0;
+        bottom:0;
+        background-color: green;
+        width: 100px;
+      }
+      .fourteen-c
+      {
+        background-color: pink;
+        color: pink;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left:0;
+      }
+      .fourteen-d
+      {
+        background-color: rgba(0, 0, 0, .5);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left:0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .fourteen-d-modal
+      {
+        background-color: white;
+        color: black;
+        width: 400px;
+        padding: 20px 20px;
+        border-radius: 5px;
+      }
+      .fourteen-d-modal-header
+      {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .fourteen-d-modal-body
+      {
+        margin-bottom: 10px;
+      }
+      .fourteen-e
+      {
+        background-color: white;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 50px;
+        padding-top: 10px;
+      }
+      .fourteen-e-header
+      {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .fourteen-e-img-container
+      {
+        flex:1;
+        display: flex;
+        align-items: center;
+      }
+      .fourteen-e-img
+      {
+        height: 40px;
+        width: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-left: 100px;
+      }
+      .fourteen-e-p
+      {
+        margin-left: 10px;
+        font-weight: bold;
+      }
+      .fourteen-e-btn-container
+      {
+        display: flex;
+        width: 250px;
+      }
+      .fourteen-e-btn
+      {
+        margin-left: 10px;
+        width: 100px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px 10px;
+      }
+      .fourteen-e-add-friend
+      {
+        background-color: rgb(25, 102, 244);
+        color: white;
+      }
+      .fourteen-e-message
+      {
+        background-color: rgba(194, 194, 194, .7);
+        color: black;
+      }
+      .fourteen-f
+      {
+        left: 0;
+        top: 60px;
+        bottom: 0;
+        width: 250px;
+        display: flex;
+      }
+      .fourteen-f-img-container
+      {
+        width: 60px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, .8);
+      }
+      .fourteen-f-img
+      {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: 20px;
+      }
+      .fourteen-f-info
+      {
+        flex: 1;
+        background-color: rgba(0, 0, 0, .7);
+        padding: 20px 10px;
+      }
+      .fourteen-f-p
+      {
+        color: rgb(184, 179, 179);
+      }
+      .fourteen-f-info-header
+      {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      .fourteen-f-info-title
+      {
+        color: white;
+        font-weight: bold;
+      }
+      .fourteen-f-info-plus
+      {
+        cursor: pointer;
+      }
+      .fourteen-info-tag
+      {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fourteen fourteen-a">
+      bottom-right
+    </div>
+    <div class="fourteen fourteen-b">
+      right sidebar
+    </div>
+    <div class="fourteen fourteen-c">All window</div>
+    <div class="fourteen fourteen-d">
+      <div class="fourteen-d-modal">
+        <p class="fourteen-d-modal-header">Modal Title</p>
+        <p class="fourteen-d-modal-body">This is a modal</p>
+        <button class="fourteen-d-modal-btn">Close</button>
+      </div>
+    </div>
+    <div class="fourteen fourteen-e">
+      <div class="fourteen-e-header">
+        <div class="fourteen-e-img-container">
+          <img class="fourteen-e-img" src="./assets/micheal-scott.png">
+          <p class="fourteen-e-p">Micheal Scott</p>
+        </div>
+        <div class="fourteen-e-btn-container">
+          <button class="fourteen-e-btn fourteen-e-add-friend">Add Friend</button>
+          <button class="fourteen-e-btn fourteen-e-message">Message</button>
+        </div>
+      </div>
+    </div>
+    <div class="fourteen fourteen-f">
+        <div class="fourteen-f-img-container">
+          <img class="fourteen-f-img" src="./assets/micheal-scott.png">
+          <img class="fourteen-f-img" src="./assets/david-wallace.webp">
+          <img class="fourteen-f-img" src="./assets/pam-halpert.jpeg">
+        </div>
+        <div class="fourteen-f-info">
+          <div class="fourteen-f-info-header">
+            <p class="fourteen-f-p fourteen-f-info-title">INFO</p>
+            <p class="fourteen-f-p fourteen-f-info-plus">+</p>
+          </div>
+          <div class="fourteen-info-tags">
+            <p class="fourteen-f-p fourteen-info-tag"># Scranton Branch</p>
+            <p class="fourteen-f-p fourteen-info-tag"># Dunder Mifflin</p>
+            <p class="fourteen-f-p fourteen-info-tag"># Corporate</p>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
