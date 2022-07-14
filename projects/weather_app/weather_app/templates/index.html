@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static%}
+        <link rel="stylesheet" href="{% static 'style.css'%}"> 
+    </head>
+    <body>
+        <div class="weather-header">
+            <h1>Wheater App</h1>
+        </div>
+        <div class="weather-app">
+            <form method="POST" action="" class="searchbar">
+                {% csrf_token %}
+                <input type="text" class="text" name="city" placeholder="Search...">
+                <input type="Submit" class="button" value="Search">
+            </form>
+            {% if city != '' %}
+            <div class="weather-response">
+                <h2>{{ city }}</h2>
+                <h3>Country Code: {{ country_code }}</h3>
+                <h3>Coordinate: {{ coordinate }}</h3>
+                <h3>Temperature: {{ temp }} </h3>
+                <h3>Pressure: {{ pressure }}</h3>
+                <h3>Humidity: {{ humidity }}</h3> 
+            </div>
+            {% endif %}
+        </div>
+    </body>
+</html>

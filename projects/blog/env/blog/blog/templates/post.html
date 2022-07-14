@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'index.css'%}">
+    </head>
+    <body>
+        <div class="blog-redirect-home">
+            <a href="/">Go back home</a>
+        </div>
+        <section class="blog-header">
+            <div class="blog-card">
+                <h1>{{posts.title}}</h1>
+                <h2>{{posts.created_date}}</h2>
+                <p>{{posts.body}}</p> 
+            </div>
+        </section>
+    </body>
+</html>

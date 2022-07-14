@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'index.css' %}">
+    </head>
+    <body>
+        <section class="blog-header">
+            <div class="blog-card">
+                <h1>Personal Blog</h1>
+            </div>
+        </section>
+        {% for post in posts reversed %}
+            <section class="blog-post">
+                <a href="/post/{{post.id}}">
+                    <div class="blog-card">
+                        <h2>{{post.title}}</h2>
+                        <h3>{{post.created_date}}</h3>
+                        <p>{{post.body|truncatewords:20}}</p>
+                    </div>
+                </a>
+            </section>
+        {% endfor %}
+    </body>
+</html>

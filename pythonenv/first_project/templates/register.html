@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h5{color: red}
+        </style>
+        <h1>Sign Up Below</h1> 
+    </head>
+    <body>
+        {% for message in messages %}
+            <h5>{{message}}</h5>
+        {% endfor %}
+        <form method="POST" action="register">
+            {% csrf_token %}
+            <p>Username*:</p>
+            <input type="text" name="username" required>
+            <p>Email:</p>
+            <input type="email" name="email">
+            <p>Password*:</p>
+            <input type="password" name="password" required>
+            <p>Repeat Password*:</p>
+            <input type="password" name="password2" required>
+            <br><br>
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+    </body>
+</html>

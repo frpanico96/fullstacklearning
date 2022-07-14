@@ -1,0 +1,48 @@
+.body
+{
+    background-color: antiquewhite;
+    display: block;
+    width: 100%;
+}
+.weather-header
+{
+    background-color: lightgray;
+    margin: 0px 0px 0px 0px;
+}
+.weather-header h1
+{
+    font-size: 64px;
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 3px 1px 3px 0px;
+}
+.weather-app
+{
+    padding: 5% 0% 5% 0%;
+}
+.weather-app .searchbar
+{
+    margin: 0px 10% 0px 10%;
+    width: 80%;
+}
+.weather-app .text
+{
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    margin: 0% 10% 10% 0%;
+    margin-bottom:10px;
+}
+.weather-app .button
+{
+    width: 50%;
+    margin-left: 25%;
+}
+.weather-response
+{
+    background-color: bisque;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+}
+

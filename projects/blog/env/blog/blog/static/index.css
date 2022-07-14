@@ -1,0 +1,49 @@
+body
+{
+    background-color: lightgrey;
+    display: block;
+}
+.blog-header h1
+{
+    font-size: 64px;
+    text-align: center;
+    margin: 15px 0px 10px 0px;
+}
+.blog-header h2
+{
+    font-size: 48px;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+.blog-post
+{
+    margin-top: 20px;
+}
+.blog-post a
+{
+    text-decoration: none;
+    color: black;
+}
+.blog-card
+{
+    background-color: white;
+    padding: 1%;
+    border-radius: 10px;
+}
+.blog-card h3
+{
+    font-size: 1rem;
+}
+.blog-card p
+{
+    font-weight: normal;
+    font-size: medium;
+}
+.blog-header p
+{
+    font-size: 1.4rem;
+}
+.blog-redirect-home
+{
+    margin: 3px 0px 3px 3px;
+}
