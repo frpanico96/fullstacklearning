@@ -131,3 +131,110 @@ animals.splice(1, 0, 'frog', 'snake'); // --> Insert
 
 let people = ['Mrs. Robinson', 'Angie', 'Jolene', 'Maggie May', 'Roxanne'];
 people.sort() // --> Sort the array alphabetically
+
+
+/* 8 - Const with Array */
+const myEggs = ['brown','brown']; // What has to be constant is the reference to the array
+myEggs.push('purple'); //The array can be modified in values
+console.log(myEggs);
+
+/* 9 - Nested Arrays */
+const colors = [['red', 'crimson'],['orange', 'darkorange'],['yellow', 'golden rod'],['blue', 'dark blue']];
+const animalPairs = [['doe', 'buck'],['ewe','ram'],['peahen', 'peacock']];
+
+console.log(animalPairs[2][0]);
+console.log(animalPairs[2][1]);
+console.log(animalPairs[1][1]);
+
+animalPairs[0][1] = 'stag'; // --> Update nested array element
+
+console.log(animalPairs[0][1]);
+
+const ticTackToeBoard = [['O', '   ', 'X'],['   ', 'X', 'O'],['X', 'O', '  ']];
+let board = '';
+for(let i=0; i < ticTackToeBoard.length; ++i)
+{
+  for(let j=0; j < ticTackToeBoard[i].length; ++j)
+  {
+    if(j > 0) board += '| ';
+    board += ticTackToeBoard[i][j] + ' ';
+  }
+  if(i < ticTackToeBoard.length - 1) board += '\n__ __ __\n';
+}
+console.log(board); // --> :)
+
+const threeLevelArray = [['doe', ['buck', 'stag']]];
+console.log(threeLevelArray[0][1][0]);
+console.log(threeLevelArray[0][1][1]);
+
+/* 10 - Object */
+const fitbitData = 
+{
+  totalSteps: 308727,
+  totalMiles: 211.7,
+  avgCalorieBurn: 5755,
+  workoutsThisWeek: '5 of 7',
+  avgGoodSleep: '2: 13s', // --> The trailing comma is optional
+}
+
+console.log(fitbitData);
+console.log(fitbitData.avgCalorieBurn); // --> dot syntax value access
+
+const numbers = 
+{
+  100: 'one hundred',
+  16: 'sixteen',
+  red: '#eb4d4b'
+};
+console.log(numbers[100]);
+console.log(numbers['100']);
+let color = 'red';
+console.log(numbers[color]);
+
+
+const userReviews = {};
+userReviews['queenBee49'] = 4;
+userReviews.mrSmith78 = 3.5;
+
+console.log(userReviews);
+
+/* 11 - Arrays and Objects */
+const student = 
+{
+  firstName: 'David',
+  lastName: 'Jones',
+  strenghts: ['Music', 'Art'], // --> Array inside object
+  exams: {midterm: 92, final: 88} // --> Object inside object
+}
+
+console.log('exams average:', (student['exams'].midterm + student.exams['final']) * 0.5);
+
+
+const shoppingCart = // --> Array of objects
+[
+  {
+    product: 'Jenga Classic',
+    price: 6.88,
+    quantity: 1
+  },
+  {
+    product: 'Echo Dot',
+    price: 29.99,
+    quantity: 3
+  },
+  {
+    product: 'Fire Stick',
+    price: 39.99,
+    quantity: 2
+  }
+]
+
+const ticTacToeStats = 
+{
+  player1: {username: 'blue', character: 'X'},
+  player2: {username: 'muffins', character: 'O'},
+  board: board
+}
+
+console.log(ticTacToeStats['player1'].username + ': ' + ticTacToeStats['player1'].character + ' - ' + ticTacToeStats['player2'].username + ': ' + ticTacToeStats['player2'].character);
+console.log(ticTacToeStats.board);
