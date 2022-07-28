@@ -238,3 +238,82 @@ const ticTacToeStats =
 
 console.log(ticTacToeStats['player1'].username + ': ' + ticTacToeStats['player1'].character + ' - ' + ticTacToeStats['player2'].username + ': ' + ticTacToeStats['player2'].character);
 console.log(ticTacToeStats.board);
+
+
+let nums = [1,2,3];
+let misteryObj = [1,2,3];
+let otherNums = nums;
+
+console.log(nums === misteryObj); // --> Evaluates to false due to difference references
+console.log(nums === otherNums); // --> Evaluates to true because they have the same reference
+
+const user = 
+{ 
+  username: 'username',
+  email: 'email@email.com',
+  notifications : [],
+}
+console.log(user.notifications === []); // --> evaluates to false
+console.log(!user.notifications.length); // --> evaluates to true because 0 is evaluated as false
+
+/* 12 - For Loop */
+let printHello = () => {
+  console.log('Hello World');
+}
+
+let forLoop = (startingPoint, endingPointExcluded, increment, callback) => 
+{
+  callback();
+  startingPoint += increment;
+  if(startingPoint < endingPointExcluded)
+  {
+    forLoop(startingPoint, endingPointExcluded, increment, callback);
+  }
+}
+
+forLoop(0, 10, 1, printHello); // Tried to recreate a primitive version of forLoop with a recursive function, it actually worked :)
+
+
+for(let i=0; i < 10; ++i) // --> Real for loop 
+{
+  console.log('Hello From for loop');
+}
+for(let i=0; i<20; ++i) // --> First twenty perfect square
+{
+  console.log(`${(i + 1)}x${(i + 1)} = ${(i+1)*(i+1)}`);
+}
+for(let i=200; i >= 0; i-=25) // --> Backward loop
+{
+  console.log(i);
+}
+
+const animalsArray = ['lions', 'tigers', 'bears'];
+for(let i = 0; i < animalsArray.length; ++i) // --> Loop through an array
+{
+  console.log(animalsArray[i]);
+}
+
+const students = 
+[
+  {
+    firstName: 'Zeus',
+    grade: 86
+  },
+  {
+    firstName: 'Artemis',
+    grade: 91
+  },
+  {
+    firstName: 'Apollo',
+    grade: 90
+  },
+];
+
+let sum = 0
+for(let i = 0; i < students.length; ++i)
+{
+  let student = students[i];
+  sum += student.grade;
+  console.log(`${student.firstName} got a grade of: ${student.grade}`);
+}
+console.log(`Average of grade is: ${sum/students.length}`);
