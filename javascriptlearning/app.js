@@ -317,3 +317,132 @@ for(let i = 0; i < students.length; ++i)
   console.log(`${student.firstName} got a grade of: ${student.grade}`);
 }
 console.log(`Average of grade is: ${sum/students.length}`);
+
+
+/* 13 - Nested Loop */
+for(let i=0; i< 10; i++)
+{
+  console.log('OUTER LOOP:', i+1);
+  for(let j=10; j>=0; j-=2)
+  {
+    console.log('     INNER LOOP', j);
+  }
+}
+
+const gameBoard =
+[
+  [4, 32, 8, 4],
+  [64, 8, 32, 2],
+  [8, 32, 16, 4],
+  [2, 8, 4, 2]
+];
+
+let row = ''
+let totaleScore = 0;
+for(let i = 0; i < gameBoard.length; ++i)
+{
+  for(let j= 0; j< gameBoard[i].length; j++)
+  {
+    row += gameBoard[i][j].toString() + ' ';
+    totaleScore += gameBoard[i][j];
+  }
+  if(i < gameBoard.length - 1) row+='\n';
+}
+console.log(row);
+console.log(totaleScore);
+
+
+/* 14 - While loop */
+let gameOver = false;
+let total = 0;
+const NUMBER_OF_TRIES = 1000;
+const target = Math.floor(Math.random() * 10);
+for(let i = 0; i < NUMBER_OF_TRIES; ++i )
+{
+  let guesses = 0;
+  while(!gameOver)
+  {
+    ++guesses;
+    if(Math.floor(Math.random()* 10) === target) gameOver = true;
+  }
+  total += guesses;
+  gameOver = false;
+}
+console.log(`Guess matches target in an average of ${total/NUMBER_OF_TRIES} moves`);
+
+/* 15 - For...Of loop */
+const subreddit = ['soccer', 'popheads', 'cringe', 'books'];
+for(let sub of subreddit) // --> It is used to loop through iterable
+{
+  console.log(sub);
+}
+for(let char of 'chimichurri')
+{
+  console.log(char.toUpperCase());
+}
+const magicSquare = 
+[
+  [2, 7, 6],
+  [9, 5, 1],
+  [4, 3, 8]
+]
+for(row of magicSquare) // --> The For...Of in this case allows only to sum rows
+{
+  let sum = 0;
+  for(element of row)
+  {
+    sum += element;
+  }
+  console.log(sum);
+}
+
+const words1 = ['mail', 'milk', 'bath', 'black'];
+const words2 = ['box', 'shake', 'tub', 'berry'];
+for(let i = 0; i < words1.length; ++i) // --> In this case it is not suitable to use a For
+{
+  console.log(`${words1[i]}${words2[i]}`);
+}
+
+const movieReviews =
+{
+  Arrival :9.5,
+  Alien :9,
+  Amelie :8,
+  'In Bruges' :9,
+  Amadeus :10,
+  'Kill Bill' :8,
+  'Little Miss Sunshine' :8.5,
+  Coraline :7.5
+}
+
+for(let movie of Object.keys(movieReviews))
+{
+  console.log(movie, movieReviews[movie]);
+}
+let avgRating = 0;
+for(let rating of Object.values(movieReviews))
+{
+  avgRating += rating
+}
+console.log(avgRating/(Object.values(movieReviews)).length);
+
+/* 16 - For...In loop */
+const jeopardyWinnings = 
+{
+  regularPlay : 2522700,
+  watsonChallenge: 300000,
+  tournamentOfChampios: 500000,
+  battleOfTheDecades: 100000
+};
+
+let totalEarnings = 0;
+for(let prop in jeopardyWinnings)
+{
+  totalEarnings +=  jeopardyWinnings[prop];
+}
+console.log(totalEarnings);
+
+for(let k in [88, 99, 77, 66])
+{
+  console.log(k);
+}
