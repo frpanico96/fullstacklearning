@@ -446,3 +446,52 @@ for(let k in [88, 99, 77, 66])
 {
   console.log(k);
 }
+
+/* 17 - Functions */
+grumpus = () => { // --> this is the ES6, before the syntax was function funcName(){}
+  console.log('ugh...you again...');
+  console.log('FOR THE LAST TIME...');
+  console.log('LEAVE ME ALONE!!!');
+}
+grumpus();
+
+rollDie = () => // --> Generate a random number between 1 and 6
+{
+  return Math.floor(Math.random() * 6 + 1);
+}
+
+console.log(rollDie());
+
+greet = person => 
+{
+  console.log(`Hi ${person}`);
+}
+
+greet('Jim');
+
+throwAndAvgDice = numberOfRolls => 
+{
+  let avg = 0;
+  for(let i = 0; i < numberOfRolls; i++)
+  {
+    let roll = rollDie();
+    avg += roll;
+  }
+  return avg/numberOfRolls;
+}
+
+console.log(throwAndAvgDice(10000));
+
+divide = (x,y) => 
+{
+  if(typeof x !== 'number' || typeof y !== 'number') return;
+  if(y === 0) return;
+  return x/y;
+}
+
+console.log(divide('s', 1));
+console.log(divide(2,0));
+console.log(`${divide(1,4)} is different from ${divide(4,1)}`);
+
+
+
