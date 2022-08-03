@@ -495,3 +495,121 @@ console.log(`${divide(1,4)} is different from ${divide(4,1)}`);
 
 
 
+/* 18 - Challenge Function isValidPassowrd */
+console.log('### Challenge 1 Begins ###');
+
+isValidPassword = (password, username) => 
+{
+  // If username or password is not a string return false
+  if(typeof password !== 'string' || typeof username !== 'string') return false;
+  // If password is not at least 8 characters long return false
+  if(password.length < 8) return false;
+  // Password cannot contains spaces
+  if(password.indexOf(' ') > -1) return false;
+  // Password cannot contains username case insensitive check
+  if((password.toLowerCase()).indexOf(username.toLowerCase()) > -1) return false;  
+  // All requirements are met
+  return true;
+}
+// Test Cases
+if(isValidPassword(1,'username')) console.log('Challenge 1 Failed'); //Expected False
+if(isValidPassword('passwrd','username')) console.log('Challenge 1 Failed'); //Expected False
+if(isValidPassword('pass word','username')) console.log('Challenge 1 Failed'); //Expected False
+if(isValidPassword('dogLuvr123','dogLuvr')) console.log('Challenge 1 Failed'); //Expected False
+if(isValidPassword('DOGLUVR123','dogLuvr')) console.log('Challenge 1 Failed'); //Expected False
+if(!isValidPassword('89Fjj1nms','dogLuvr')) console.log('Challenge 1 Failed'); //Expected True 
+
+console.log('Challenge 1 Succed!!!');
+
+console.log('### Challenge 1 Ends ###');
+
+/* 19 - Challenge Function avg */
+console.log('### Challenge 2 Begins ###');
+
+avg = (numbers) => 
+{
+  //If it is not an array return fals
+  if(!Array.isArray(numbers)) return false;
+  //If any element in the array is not a number return false
+  let result = 0;
+  for(let num of numbers)
+  {
+    if(typeof num !== 'number') return false;
+    result += num;
+  }
+  return result/numbers.length;
+
+}
+// Test Cases
+if(avg({})) console.log('Challenge 2 Failed'); //Expected False
+if(avg(['passwrd','username'])) console.log('Challenge 2 Failed'); //Expected False
+if(avg([0, 50]) !== 25) console.log('Challenge 2 Failed'); //Expected True
+if(!avg([0, 50, 30, 40, 50, 10, 30, 129.2, 49.1])) console.log('Challenge 2 Failed'); //Expected True
+
+
+console.log('Challenge 2 Succed!!!');
+
+console.log('### Challenge 2 Ends ###');
+
+/* 20 - Challenge Function isPangram */
+console.log('### Challenge 3 Begins ###');
+
+isPangram = (sentence) => 
+{
+  // If the sentence is not a string return false
+  if(typeof sentence !== 'string') return false;
+  //Making the test case insensitive
+  let sentenceToLowerCase = sentence.toLowerCase();
+  let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+  //Another solution which is smarter :) 
+  alphabetSecondSolution = 'abcdefghijklmnopqrstuvwxyz';
+  for(let letter of alphabetSecondSolution)
+  {
+    //If a letter is not contained in the sentence is not a pangram
+    //It is possible to use "includes" instead of "indexOf"
+    if(sentenceToLowerCase.indexOf(letter) === -1) return false;
+  }
+  //The sentence meet the requirements and it is a pangram
+  return true;
+}
+// Test Cases
+if(isPangram('I am not a pangram')) console.log('Challenge 3 Failed'); //Expected False
+if(!isPangram('Two driven jocks help fax my big quiz')) console.log('Challenge 3 Failed'); //Expected True
+if(!isPangram('The quick brown fox jumps over the lazy dog')) console.log('Challenge 3 Failed'); //Expected True
+
+
+console.log('Challenge 3 Succed!!!');
+
+console.log('### Challenge 3 Ends ###');
+
+
+/* 21 - Challenge Function getCard */
+console.log('### Challenge 4 Begins ###');
+
+pickRandom = arr => 
+{
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+getCard = () => 
+{
+  // Define possible values and suites
+  const cardValue = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+  const cardSuite = ['clubs', 'spades', 'hearts', 'diamonds'];
+  let result = {};
+  // Popoulate the resulting object with a card value and a suite
+  // It is possible to use a function to pick the random number
+  result["value"] = pickRandom(cardValue);
+  result["suite"] = pickRandom(cardSuite);
+  return result;
+}
+// Test Cases
+for(let i = 0; i < 10; ++i)
+{
+  let play = getCard();
+  console.log(`Player ${i} played: ${play.value} of ${play.suite}`);
+}
+
+console.log('Challenge 4 Succed!!!');
+
+console.log('### Challenge 4 Ends ###');
