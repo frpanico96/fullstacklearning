@@ -613,3 +613,35 @@ for(let i = 0; i < 10; ++i)
 console.log('Challenge 4 Succed!!!');
 
 console.log('### Challenge 4 Ends ###');
+
+
+/* 22 - Scope */
+lol = () => //--> Variabile are in function scope
+{
+  let person = 'Tom';
+  const age = 45;
+  var color3 = 'teal';
+}
+lol();
+//console.log(color3); // --> This gives an error because color3 is not defined in this scope
+
+let bird = 'mandarin duck';
+
+function birdWatch()
+{
+  let bird = 'golden pheasant'; // --> It is possible to have the same variable name for variables in different scope
+}
+
+console.log(bird); // --> The value will be 'mandarin duck' because the one is function scope is not defined in this scope
+
+if(true)
+{
+  const animal = 'eel'; // --> This variable is defined in the block scope
+  let secondAnimal = 'elephant'; // --> this variable is defined at block scope
+  var thirdAnimal = 'duck' // --> this variable can be accessed from outside because ignores block scope
+  console.log(animal);
+}
+//console.log(animal);// -->  This gives an error because variable is not defined in this scope
+//console.log(secondAnimal);// --> This gives an error because variable is not defined in this scope
+console.log(thirdAnimal); // --> This does not give an error because var ignore block scope
+
