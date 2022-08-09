@@ -645,3 +645,73 @@ if(true)
 //console.log(secondAnimal);// --> This gives an error because variable is not defined in this scope
 console.log(thirdAnimal); // --> This does not give an error because var ignore block scope
 
+outer = () =>
+{
+  let hero = 'Black Panther';
+  inner = () =>
+  {
+    let cryForHelp = `${hero} please save me!`; // --> cryForHelp is looked up in the "outer" function (Lexical Scope)
+    console.log(cryForHelp);
+    extraInner = () =>
+    {
+      console.log(cryForHelp + ' From extra inner'); // --> cryForHelp is looked up in the "inner" function (Lexical Scope)
+    }
+    extraInner();
+  }
+
+  inner();
+}
+
+outer();
+
+/* 23 - Function Expression */
+const square = (num) => { // --> it is possible to declare functions as variables, since functions are objects in javascript
+  return num * num;
+}
+console.log(square(2));
+
+/* 24 - Higher Order Functions */
+add1 = (x,y) => {return x+y};
+const subtract1 = (x, y) => {return x-y};
+multiply1 = (x,y) => {return x*y};
+const divide1 = (x,y) => {return x/y};
+
+const operations = [add1, subtract1, multiply1, divide1]; // --> It is possible to define array of functions
+
+console.log(operations[1](100,4));
+
+for(let func of operations) // --> And loop through it
+{
+  console.log(func(2,3));
+}
+
+const thing = { doSomething: multiply1 }; // --> It is possible to define object where values are functions
+
+/* 24 - Functions as Arguments */
+callThreeTimes = (func) => // --> This funcion takes a function as an argument
+{
+  func();
+  func();
+  func();
+}
+const laugh = () => { console.log('AHAHAHAHAHAHHAHAHAH') };
+const laughWithE = () => { console.log('EHEHEHEHEHEHEHEHEHEHE')};
+callThreeTimes(laugh);
+
+repeatNTimes = (action, repetitions) => // --> This funcion takes a function as an argument
+{
+  for(let i = 0; i< repetitions; ++i)
+  {
+    action();
+  }
+}
+
+repeatNTimes(laugh, 13);
+
+callOne = (func1, func2) => // --> This funcion takes a function as an argument
+{
+  if(Math.random() < 0.5) func1();
+  else func2();
+}
+
+callOne(laugh, laughWithE);
