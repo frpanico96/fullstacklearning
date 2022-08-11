@@ -687,7 +687,7 @@ for(let func of operations) // --> And loop through it
 
 const thing = { doSomething: multiply1 }; // --> It is possible to define object where values are functions
 
-/* 24 - Functions as Arguments */
+/* 25 - Functions as Arguments */
 callThreeTimes = (func) => // --> This funcion takes a function as an argument
 {
   func();
@@ -715,3 +715,47 @@ callOne = (func1, func2) => // --> This funcion takes a function as an argument
 }
 
 callOne(laugh, laughWithE);
+
+/* 26 - Functions as return values */
+multiplyBy = (num) => // --> This function can be thought as a function factory
+{
+  return (x) => {
+    return x * num
+  }
+}
+
+const triple = multiplyBy(3); // --> MultiplyBy returns a function which is stored in triple
+console.log(triple(2));
+console.log(triple(6));
+console.log(triple(9));
+
+const double = multiplyBy(2); // --> Multiply returns a function which is store in double
+console.log(double(2));
+console.log(double(4));
+console.log(double(6));
+
+makeBetweenFunc = (x, y) => 
+{
+  return (num) => 
+  {
+    return x <= num && num <= y
+  }
+}
+
+const isChild = makeBetweenFunc(0,18);
+console.log(isChild(3));
+console.log(isChild(23));
+
+/* 27 - Callback */
+sampleFunc = () => { console.log('A sample callback')};
+setTimeout(sampleFunc, 5000); // --> This JS function takes two arguments: a function that need to be called after an amount of time
+              // --> And the amount of time
+              // --> A function passed as an argument and called inside the outer class is called a "Callback"
+
+const btn = document.querySelector('button');
+btn.addEventListener('click', sampleFunc);
+
+/* 28 - Hoisting */
+console.log(animal3); // --> It will not be thrown an error beacuse the variable declaration is "Hoisted" before the log
+                      // --> This beahviour does not apply to let and const.
+var animal3 = 'tapir';
