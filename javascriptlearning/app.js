@@ -759,3 +759,66 @@ btn.addEventListener('click', sampleFunc);
 console.log(animal3); // --> It will not be thrown an error beacuse the variable declaration is "Hoisted" before the log
                       // --> This beahviour does not apply to let and const.
 var animal3 = 'tapir';
+
+/* 29 - Array CallbackMethod */
+const numbers29 = [20, 21, 22, 23, 24, 25, 26, 27];
+
+numbers29.forEach(function(num) // --> Calls the callback function for each element in the array (anonymous function)
+{
+  console.log(num);
+})
+
+function printTriple(n)
+{
+  console.log(n * 3);
+}
+
+numbers29.forEach(printTriple);// --> Calls the callback function for each element in the array (declared function)
+
+numbers29.forEach(function(num, idx) // --> The second parameter is always the index
+{
+  console.log(num, idx);
+})
+
+
+const words = ['asap', 'byob', 'rsvp', 'diy'];
+
+
+const newNumbers = numbers29.map(function(num) // --> Creates a new array calling for each element a callback function
+{
+  return num * 2; // --> The return statement is needed to tell to map what to put in the new array
+})
+
+console.log(newNumbers);
+
+const num29Detail = numbers29.map(function(n)
+{
+  return { value: n, isEven: n % 2 === 0}
+})
+
+console.log(num29Detail);
+
+const newWords = words.map(function(word)
+{
+  return word.toUpperCase().split('').join('.') + '.';
+})
+
+console.log(newWords);
+
+
+const squareFunc = function(x) { return x * x; } // --> Old function declaration
+const squareFuncNew = (x) => { return x * x; } // --> Arrow Function definition
+const squareFuncNewWoPar = x => { return x * x; } // --> Arrrow function without parenthesis
+const squareFuncNewImplicitReturn = x => ( x * x ); // --> Arrow function with implicit return
+const squareFuncNewOneLiner = x => x * x; // --> Arrow function one-liner implicit return
+
+
+console.log(squareFuncNewOneLiner(3));
+
+
+const num29Arrow = numbers29.map( n => { return n * 2; });
+console.log(num29Arrow);
+
+const parityList = numbers29.map( n => n % 2 === 0 ? 'even' : 'odd');
+console.log(parityList);
+
