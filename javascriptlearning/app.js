@@ -822,3 +822,13 @@ console.log(num29Arrow);
 const parityList = numbers29.map( n => n % 2 === 0 ? 'even' : 'odd');
 console.log(parityList);
 
+let movies = [ 'The fantastic Mr. Fox', 'Mr. and Mrs. Smith', 'Mrs. Doubtfire', 'Mr. Deeds'];
+const movie = movies.find( movie => movie.includes('Mrs.')); // --> Returns the first occurrence that satisfies the condition in the function
+console.log(movie);
+const movie2 = movies.find(m => (m.indexOf('Mrs.') === 0));
+console.log(movie2);
+
+const oddFilterNums = numbers29.filter(n => n % 2 === 1); // --> Creates a new array with the elements that satisfies the boolean condition in the callback
+const evenFilterNums = numbers29.filter(n => n % 2 === 0);
+console.log(oddFilterNums);
+console.log(evenFilterNums);
