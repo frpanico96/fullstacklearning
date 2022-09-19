@@ -832,3 +832,52 @@ const oddFilterNums = numbers29.filter(n => n % 2 === 1); // --> Creates a new a
 const evenFilterNums = numbers29.filter(n => n % 2 === 0);
 console.log(oddFilterNums);
 console.log(evenFilterNums);
+
+const words29 = ['dog', 'dig', 'log', 'bag', 'wag'];
+
+const all3Letters = words29.every( word => word.length === 3); // --> Returns true if all the elemnts pass the callback test
+const startWithD = words29.some( word => word.startsWith('d'));// --> Return true if any of the elements passes the callback test
+
+console.log(all3Letters);
+console.log(startWithD);
+
+const prices = [400.50, 3000, 99.99, 35.99, 12.00, 9500];
+
+const sort1 = prices.sort((a, b) => a - b); // --> Sort the original array based on the compare func.
+                                            // --> If the compare func returns < 0 sort a before b
+                                            // --> If the compare func returns = 0 leave a and b unchanged
+                                            // --> If the compare func returns > 0 sort b before a
+console.log(sort1);
+
+const nums299 = [3, 4, 5, 6, 7];
+const result299 = nums299.reduce((total, currentValue) => { return total * currentValue; }); // --> Returns a single value obatained by calling the callback function for each element
+console.log(result299);
+
+
+const grades = [87, 64, 96, 92, 88, 99, 73, 70, 64];
+const maxGrades = grades.reduce((max, currentValue) =>{ return max > currentValue ? max : currentValue});
+const maxGradesWithMax = grades.reduce((max, currentValue) => Math.max(max, currentValue));
+const minGrade = grades.reduce((min, currentValue) => Math.min(min, currentValue));
+console.log(maxGrades);
+console.log(maxGradesWithMax);
+console.log(minGrade);
+
+const noInitialValue = [4,5,6,7,8].reduce((accumulator, currentValue) => accumulator + currentValue);
+const withInitialValue = [4,5,6,7,8].reduce((accumulator, currentValue) => accumulator + currentValue, 100); // --> It is possible to start with a starting value (which is by default 0)
+console.log(noInitialValue);
+console.log(withInitialValue);
+
+const votes = ['y','y','n','y','n','y','n','y','y','n','n','n'];
+
+const tallyObj = votes.reduce((tally, val) => {
+  if(tally[val]) ++tally[val];
+  else tally[val] = 1;
+  return tally;
+}, {}); //--> In this case the initial value is an object
+console.log(tallyObj);
+
+const tallyObj2 = votes.reduce((tally, val) => {
+  tally[val] = (tally[val] || 0) + 1;
+  return tally;
+})
+console.log(tallyObj2);
