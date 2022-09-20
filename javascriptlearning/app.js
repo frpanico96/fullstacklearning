@@ -881,3 +881,11 @@ const tallyObj2 = votes.reduce((tally, val) => {
   return tally;
 })
 console.log(tallyObj2);
+
+
+/* 30 - default parameters */
+const defaultParameterMultiply = (x, y=1) => x * y; // --> It is possible to pass a default parameter for the function so it can be easily called with only one parameter
+console.log(defaultParameterMultiply(2));
+
+const blah = (x, y=[1,2,3]) => console.log(x,y);
+blah(1);
