@@ -889,3 +889,41 @@ console.log(defaultParameterMultiply(2));
 
 const blah = (x, y=[1,2,3]) => console.log(x,y);
 blah(1);
+
+/* 31 - Spread */
+const nums31 = [1, 2, 3, 4, 5];
+console.log(Math.max(nums31)); // --> This returns Nan
+console.log(Math.max(...nums31)); //--> Using the Spread syntax spreads the array in 5 single elements
+const str31 = 'GOAT';
+console.log(...str31); //--> Since a string is an iterable it can be spread
+
+
+const cephalopods = ['dumbo octopus','humboldt squid', 'flanboyant cuttlefish'];
+const gastropods = ['giant african snail', 'banana slung', 'variable neon slug'];
+const cnidaria = ['fire coral', 'moon jelly'];
+
+const mollusca = [...cephalopods, ...gastropods]; // --> Spread allow to create a new array with elements of both original arrays
+console.log(mollusca);
+const cephCopy = [...cephalopods]; // --> With spread it is possible to create new arrays with unique references
+console.log(cephCopy === cephalopods); // --> This return false
+
+const feline = {
+  legs: 4,
+  family: 'Felidae'
+}
+const canine = {
+  family: 'Canine',
+  furry: true
+}
+const dog = { // --> It is possible to use Spread to extends object
+  ...canine,
+  isPet: true,
+  adorable: true
+}
+const houseCat ={
+  ...feline,
+  isGrumpy: true,
+  personality: 'unpredictable'
+}
+const catDog = {...canine, ...feline};
+console.log(catDog); //--> When creating objects starting from two objects it is important to lookup for equal keys that overrides.
