@@ -927,3 +927,84 @@ const houseCat ={
 }
 const catDog = {...canine, ...feline};
 console.log(catDog); //--> When creating objects starting from two objects it is important to lookup for equal keys that overrides.
+
+/* 32 - arguments array-like and Rest syntax */
+function sumAll()
+{
+  let total = 0;
+  for(let i=0; i < arguments.length; ++i) //--> All function(s) have the "arguments" keyword which is an array-like object, has property length but does not have array methods
+  {
+    total += arguments[i];
+  }
+  return total;
+}
+console.log(sumAll(1,2,3,4,5,6));
+
+function sumAllRest(...nums) // --> Rest syntax is the same syntax as spread, but it has an opposite function. It collects every remaining arguments in an array
+{
+  return nums.reduce((total, currentValue) => total + currentValue);
+}
+console.log(sumAllRest(1,2,3,4,5,6));
+
+const fullName32 = (first, last, ...titles) => 
+{
+  console.log('first', first);
+  console.log('last', last);
+  console.log('titles', titles);
+}
+fullName32('tom', 'jones', 'III', 'Order of the Phoenix');
+
+/* 33 - Destructuring */
+const raceResults = ['Eliud Kipchoge', 'Feyisa Lelisa', 'Galen Rupp', 'Ghirmay Ghebreslassie', 'Alphonce Simbu', 'Jared Ward'];
+
+const [gold, silver, bronze] = raceResults; //--> This syntaxt assign to gold, silver, bronze variable the first, second and third element respectively
+console.log(gold);
+console.log(silver);
+console.log(bronze);
+
+const [first,,,fourth] = raceResults; // --> With commas it is possible to skip elements of the array
+console.log(first);
+console.log(fourth);
+const [winner, ...others] = raceResults;
+console.log(winner);
+console.log(others);
+const [winnerNew, , ...othersNew] = raceResults;
+console.log(winnerNew);
+console.log(othersNew);
+
+const runner = {
+  firstName: 'Eliud',
+  lastName: 'Kipchoge',
+  country: 'Kenya',
+  title: 'Elder of the Order of the Golden Heart of Kenya'
+}
+
+const {firstName, lastName, time, ...other} = runner;
+console.log(firstName); // --> The value to the variable is assigned based on the key name
+console.log(lastName);
+console.log(time); // --> If the key is not found it's value will be undefined
+console.log(other); // --> It is possible to collect remaining key/value pairs with spread syntaxt
+
+const {country: nation, title: honorific} = runner; // --> With this syntaxt it is possible to choose custom names for the variables to destructure
+console.log(nation);
+console.log(honorific);
+
+const result33 = 
+[
+  {
+  first: 'Eliud',
+  last: 'Kipchoge',
+  country: 'Kenya'
+  },
+  {
+    first: 'Feyisa',
+    last: 'lilesa',
+    country: 'Ethiopia'
+  }
+];
+
+const [{first: goldWinner}, {country}] = result33 // --> It is possible combine destructuring of arrays and objects but it is not recommended
+console.log(goldWinner, country);
+
+const fullNameDestructuring = ({firstName, lastName}) => `${firstName} ${lastName}`; // --> It is possible to use destructuring in function's parameter
+console.log(fullNameDestructuring(runner));
