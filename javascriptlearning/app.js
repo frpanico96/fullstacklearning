@@ -1008,3 +1008,38 @@ console.log(goldWinner, country);
 
 const fullNameDestructuring = ({firstName, lastName}) => `${firstName} ${lastName}`; // --> It is possible to use destructuring in function's parameter
 console.log(fullNameDestructuring(runner));
+
+/* 34 - Features and Objects methods */
+const getStats = (arr) => 
+{
+  const max = Math.max(...arr);
+  const min = Math.min(...arr);
+  const sum = arr.reduce((sum, r) => sum + r);
+  const avg = sum/arr.length;
+
+  return {max, min, sum, avg}; // --> This is the shorthand version to create object literals introduces in ES 2015
+                              // --> It creates key/value pairs with the key the variable name and value its corresponding value
+}
+
+console.log(getStats([3.2,4.5,6.2,7.6,2.3,7.8,9.1,9.4]));
+
+const role34 = 'host';
+const person34 = 'Jools Holland';
+
+const team34 = {[role34]: person34}; // --> With computed syntax it is possible to declare objects with dynamic keys directly in object definition
+
+const math34 = //--> It is possible to add functions as properties and we call them Object's methods
+{
+  multiply: (x, y) => x*y,
+  divide: (x, y) => x/y,
+  square: (x) => x*x,
+  add(x,y){ return x + y;} //--> This is a new syntax that allows to easily write object's methods
+}
+
+console.log(math34.multiply(2,3));
+console.log(math34.divide(2,3));
+console.log(math34.square(3));
+
+/* 35 - This Keyword */
+
+
