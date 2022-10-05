@@ -1041,5 +1041,67 @@ console.log(math34.divide(2,3));
 console.log(math34.square(3));
 
 /* 35 - This Keyword */
+function sayHi()
+{
+  console.log('Hi');
+  console.log(this); // --> "this" refers to the global scope "Window"
+}
 
+sayHi();
+
+const personThis = 
+{
+  first: 'Cherilyn',
+  last: 'Sarkisian',
+  nickName: 'Cher',
+  fullName() {
+    const { first, last, nickName} = this; // --> In this case "this" refers to the object itself and it is aware of other properties and methods
+    return `${first} ${last} AKA ${nickName}`;
+  },
+  printbio(){
+    console.log(this);
+    const fullName = this.fullName(); // --> Since "this" is aware of other methods can be used to call other methods on the object
+    console.log(`${fullName} is a person`);
+  },
+  laugh: () => 
+  {
+    console.log(this); // --> In arrow functions this does not have it's own reference to the object, instead it will point to the global object "Window"
+    console.log(`${this.nickName} says AHAHAHAHHAAH`);
+  }
+}
+
+personThis.printbio();
+
+const printbio = personThis.printbio;
+console.log(printbio); // --> In printbio variable "this" refers to the global scope because it belongs to it
+
+personThis.laugh();
+
+const annoyer = 
+{
+  phrases: ['literally', 'cray cray', 'I can\'t even', 'Totes!', 'YOLO', 'Can\'t stop, Won\'t stop'],
+  pickPhrase()
+  {
+    return this.phrases[Math.floor(Math.random() * this.phrases.length)];
+  },
+  start() 
+  {
+    //const that = this; // --> This is a possible workaround, that will refers to the annoyer object.
+    this.timerId = setInterval(() => // --> Calling "this" inside setInterval it will refers to "Window" because setInterval is a window method and has the global
+    {                 // --> Using arrow function will not give a new "this" reference but will use the one of the closer scope which is the object scope
+      console.log(this.pickPhrase());
+    }, 3000);
+  },
+  stop()
+  {
+    clearInterval(this.timerId);
+    console.log('Annoyer stopped');
+  }
+}
+
+annoyer.start();
+
+setTimeout(() => { 
+  annoyer.stop();
+}, 12000);
 
