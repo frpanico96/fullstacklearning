@@ -1105,3 +1105,45 @@ setTimeout(() => {
   annoyer.stop();
 }, 12000);
 
+/* 36 - More on object's method */
+const deckObj = () => // --> When an object needs to have many feature it is possible to create an object with multiple methods to easily handle all those feature
+{  
+return {
+    deck: [],
+    drawnCards: [],
+    suits : ['hearth', 'diamonds', 'spades', 'clubs'],
+    values : '2,3,4,5,6,7,8,9,10,J,Q,K,A',
+    makeDeck()
+    {
+      const { suits, values, deck} = this;
+      for(let value of values.split(','))
+      {
+        for(let suit of suits) deck.push({value, suit});
+      }
+    },
+    drawCard()
+    {
+      const card = this.deck.pop();
+      this.drawnCards.push(card);
+      return card;
+    },
+    drawCards(numCards)
+    {
+      const cards = [];
+      for(let i = 0; i< numCards; ++i)
+      {
+        cards.push(this.drawCard());
+      }
+      return cards; 
+    },
+    shuffle() // --> This method shuffle the deck
+    {
+      const {deck} = this;
+      for(let i = deck.length - 1; i > 0; --i) // --> loops through the array backwards
+      {
+        let j = Math.floor(Math.random() * (i + 1)); // --> Pick a random index less than current loop index
+        [deck[i], deck[j]] = [deck[j], deck[i]]; // --> swap elements in the deck
+      }
+    }
+  }
+}
