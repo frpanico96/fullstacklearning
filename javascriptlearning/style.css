@@ -1,0 +1,23 @@
+h1
+{
+  color: purple;
+  font-size: 60px;
+}
+
+#sample-photo
+{
+  width: 255px;
+  height: 255px;
+}
+
+.special
+{
+  color: teal;
+  font-size: 30px;
+  border: 1px solid teal;
+}
+
+input[type="password"]
+{
+  width: 700px;
+}
